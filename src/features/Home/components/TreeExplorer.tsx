@@ -1,10 +1,16 @@
 import React from 'react';
 import { JSONTree } from 'react-json-tree';
+import { IXmlData } from '../../../interfaces/shared.interface';
 
 interface Props {
-  xmlData: any;
+  xmlData: IXmlData;
 }
 
+/**
+ * A simple tree explorer that has as input an XML as JSON
+ * @param xmlData
+ * @constructor
+ */
 const TreeExplorer = ({ xmlData }: Props) => {
   return (
     <div className="tree-explorer">

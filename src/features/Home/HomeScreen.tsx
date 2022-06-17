@@ -13,7 +13,15 @@ const HomeScreen = () => {
   const [fileString, setFile] = useState<string>('');
   const [xmlData, setXmlData] = useState<IXmlData>({});
 
+  /**
+   * Monitor fileString for changes.
+   * When a file is dropped or opened through the dropzone,
+   * it will be read through a 'useFileReader' custom hook,
+   * and the hook will set the fileString.
+   */
   useEffect(() => {
+    // When a fileString is available parse XML to JSON
+    // and set local state 'xmlData' to be shown from 'TreeExplorer'.
     if (fileString) {
       const data = parser.parse(fileString);
       setXmlData(data);
