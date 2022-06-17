@@ -6,7 +6,9 @@ const HomeScreen = () => {
   return (
     <div className="padding-10">
       <div className="flex-center-start-column-nowrap">
+        <div className="dropzone-container">
         <Dropzone setFile={setFile} />
+        </div>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ const Dropzone = ({ setFile }: Props) => {
   });
 
   return (
-    <div {...getRootProps({ className: 'dropzone' })} className="dropzone-container padding-10">
+    <div {...getRootProps({ className: 'dropzone' })} className="dropzone">
       <input {...getInputProps()} />
       <div className="font18">Drop or click to upload</div>
     </div>
