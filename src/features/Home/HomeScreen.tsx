@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Dropzone from './components/Dropzone';
-import fxp from 'fast-xml-parser';
 import TreeExplorer from './components/TreeExplorer';
-
-const parser = new fxp.XMLParser({ ignoreAttributes: false });
-
-interface IXmlData {
-  [key: string]: string;
-}
+import { Parser } from '../../config';
+import { IXmlData } from '../../interfaces/shared.interface';
 
 const HomeScreen = () => {
   const [fileString, setFile] = useState<string>('');
@@ -23,7 +18,7 @@ const HomeScreen = () => {
     // When a fileString is available parse XML to JSON
     // and set local state 'xmlData' to be shown from 'TreeExplorer'.
     if (fileString) {
-      const data = parser.parse(fileString);
+      const data = Parser.parse(fileString);
       setXmlData(data);
     }
   }, [fileString]);
