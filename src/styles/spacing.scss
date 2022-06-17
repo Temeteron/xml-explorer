@@ -1,0 +1,40 @@
+@function add-unit-to-value($value, $unit){
+  @return if($value != 0, $value + $unit, 0);
+}
+
+@function increment-by-2($i, $unit){
+  @return add-unit-to-value(0 + ($i * 2), $unit);
+}
+
+$pad: padding;
+$mar: margin;
+$l: left;
+$r: right;
+$t: top;
+$b: bottom;
+$borderRad: 'border-radius';
+$repeatable-mixed-classes: $pad $l, $pad $r, $pad $t, $pad $b, $mar $l, $mar $r, $mar $t, $mar $b;
+$repeatable-classes: $pad, $mar, $borderRad;
+
+/* Create margin, padding[left,right,bottom,top] */
+@each $class in $repeatable-mixed-classes {
+  $key: nth($class, 1);
+  $value: nth($class, 2);
+
+  @for $i from 0 through 30 {
+    .#{$key}-#{str-slice($value, 0, 1)}-#{$i * 2} {
+      #{$key}-#{$value}: increment-by-2($i, px);
+    }
+  }
+}
+
+/* Create margin, padding*/
+@each $class in $repeatable-classes {
+  $key: nth($class, 1);
+
+  @for $i from 0 through 30 {
+    .#{$key}-#{$i * 2} {
+      #{$key}: increment-by-2($i, px);
+    }
+  }
+}

@@ -1,0 +1,87 @@
+// ROW
+
+.flex-center-center-row-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.flex-start-center-row-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.flex-start-start-row-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+
+.flex-space-between-center-row-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.flex-space-between-start-row-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+
+.flex-end-center-row-nowrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+// COLUMNS
+
+.flex-start-center-column-nowrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+}
+
+.flex-center-start-column-nowrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.flex-center-center-column-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.flex-center-center-column-nowrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.flex-center-space-between-column-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.flex-stretch-flex-start-column-nowrap {
+  display: flex;
+  justify-content: stretch;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+}
