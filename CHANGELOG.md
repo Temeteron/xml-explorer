@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 - (**APP**) Trigger snackbar error on wrong file type.
 - (**APP**) Trigger snackbar error on invalid xml structure.
 - (**APP**) Add unit tests with Jest.
+- (**APP**) Fix alignment of scrollbar of TreeExplorer.
 
 ## [1.0.0]
 
